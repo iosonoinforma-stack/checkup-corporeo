@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,109 +8,292 @@
 
 <title>Check-up Corporeo | iosonoinforma</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
-    <div id="screen-home" class="screen">
+<div class="card">
 
-        <img src="logo.png" class="logo">
+<div class="progress-container">
 
-        <h1>Check-up Corporeo</h1>
+<div class="progress-bar">
 
-        <p class="subtitle">
-            Scopri la tua composizione corporea e monitora i tuoi progressi.
-        </p>
+<div id="progress"></div>
 
-        <button id="startButton">
-            Inizia il Check-up
-        </button>
+</div>
 
-    </div>
+<p id="progressText">
+0%
+</p>
+
+</div>
 
 
 
-    <div id="screen-dati" class="screen hidden">
+<!-- HOME -->
 
-        <h2>I tuoi dati</h2>
+<section class="screen active" id="home">
 
-        <div class="form-group">
+<img src="logo.png" class="logo">
 
-            <label>Sesso</label>
+<h1>Check-up Corporeo</h1>
 
-            <select id="gender">
+<p class="subtitle">
 
-                <option value="">Seleziona</option>
-                <option value="M">Uomo</option>
-                <option value="F">Donna</option>
+Scopri la tua composizione corporea
+e monitora i tuoi progressi nel tempo.
 
-            </select>
+</p>
 
-        </div>
+<button id="btnStart">
 
-        <div class="form-group">
+Inizia il Check-up
 
-            <label>Età</label>
+</button>
 
-            <input
-                type="number"
-                id="age"
-                placeholder="Anni">
+</section>
 
-        </div>
 
-        <div class="form-group">
 
-            <label>Altezza (cm)</label>
 
-            <input
-                type="number"
-                id="height"
-                placeholder="Es. 175">
 
-        </div>
+<!-- DATI PERSONALI -->
 
-        <div class="form-group">
+<section class="screen" id="step1">
 
-            <label>Peso (kg)</label>
+<h2>Dati Personali</h2>
 
-            <input
-                type="number"
-                step="0.1"
-                id="weight"
-                placeholder="Es. 80">
+<div class="form-group">
 
-        </div>
+<label>Sesso</label>
 
-        <div class="form-group">
+<select id="gender">
 
-            <label>Circonferenza Vita (cm)</label>
+<option value="">Seleziona</option>
+<option value="M">Uomo</option>
+<option value="F">Donna</option>
 
-            <input
-                type="number"
-                step="0.1"
-                id="waist"
-                placeholder="Es. 90">
+</select>
 
-        </div>
+</div>
 
-        <button id="nextButton">
+<div class="form-group">
 
-            Avanti →
+<label>Età</label>
 
-        </button>
+<input type="number" id="age">
 
-    </div>
+</div>
+
+<div class="form-group">
+
+<label>Altezza (cm)</label>
+
+<input type="number" id="height">
+
+</div>
+
+<div class="form-group">
+
+<label>Peso (kg)</label>
+
+<input type="number" step="0.1" id="weight">
+
+</div>
+
+<div class="form-group">
+
+<label>Circonferenza Vita (cm)</label>
+
+<input type="number" step="0.1" id="waist">
+
+</div>
+
+<div class="buttons">
+
+<button class="next" id="goStep2">
+
+Avanti →
+
+</button>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- MISURE -->
+
+<section class="screen" id="step2">
+
+<h2>Misure Corporee</h2>
+
+<div class="form-group">
+
+<label>Torace</label>
+
+<input type="number" id="chest">
+
+</div>
+
+<div class="form-group">
+
+<label>Fianchi</label>
+
+<input type="number" id="hips">
+
+</div>
+
+<div class="form-group">
+
+<label>Braccio</label>
+
+<input type="number" id="arm">
+
+</div>
+
+<div class="form-group">
+
+<label>Coscia</label>
+
+<input type="number" id="leg">
+
+</div>
+
+<div class="buttons">
+
+<button class="back" id="back1">
+
+← Indietro
+
+</button>
+
+<button class="next" id="goStep3">
+
+Avanti →
+
+</button>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- OBIETTIVO -->
+
+<section class="screen" id="step3">
+
+<h2>Obiettivo</h2>
+
+<div class="form-group">
+
+<label>Qual è il tuo obiettivo?</label>
+
+<select id="goal">
+
+<option value="">Seleziona</option>
+
+<option>Dimagrire</option>
+
+<option>Aumentare massa muscolare</option>
+
+<option>Ricomposizione corporea</option>
+
+<option>Mantenimento</option>
+
+</select>
+
+</div>
+
+<div class="buttons">
+
+<button class="back" id="back2">
+
+← Indietro
+
+</button>
+
+<button class="next" id="goReport">
+
+Calcola Report
+
+</button>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- REPORT -->
+
+<section class="screen" id="report">
+
+<h2>Il tuo Report</h2>
+
+<div id="results">
+
+<p>
+
+Qui compariranno:
+
+</p>
+
+<ul>
+
+<li>BMI</li>
+
+<li>Body Fat %</li>
+
+<li>Massa Magra</li>
+
+<li>Massa Grassa</li>
+
+<li>Rapporto Vita/Altezza</li>
+
+<li>Peso Ideale</li>
+
+<li>Consigli Personalizzati</li>
+
+</ul>
+
+</div>
+
+<div class="buttons">
+
+<button class="back" id="back3">
+
+← Indietro
+
+</button>
+
+</div>
+
+</section>
+
+</div>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
