@@ -1,30 +1,111 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check-up Corporeo | iosonoinforma</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Check-up Corporeo | iosonoinforma</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <div class="container">
 
-    <img src="logo.png" alt="iosonoinforma" class="logo">
+    <div id="screen-home" class="screen">
 
-    <h1>Check-up Corporeo</h1>
+        <img src="logo.png" class="logo">
 
-    <p class="subtitle">
-        Scopri la tua composizione corporea e monitora i tuoi progressi nel tempo.
-    </p>
+        <h1>Check-up Corporeo</h1>
 
-    <button id="startButton">
-        Inizia il Check-up
-    </button>
+        <p class="subtitle">
+            Scopri la tua composizione corporea e monitora i tuoi progressi.
+        </p>
+
+        <button id="startButton">
+            Inizia il Check-up
+        </button>
+
+    </div>
+
+
+
+    <div id="screen-dati" class="screen hidden">
+
+        <h2>I tuoi dati</h2>
+
+        <div class="form-group">
+
+            <label>Sesso</label>
+
+            <select id="gender">
+
+                <option value="">Seleziona</option>
+                <option value="M">Uomo</option>
+                <option value="F">Donna</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Età</label>
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Anni">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Altezza (cm)</label>
+
+            <input
+                type="number"
+                id="height"
+                placeholder="Es. 175">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Peso (kg)</label>
+
+            <input
+                type="number"
+                step="0.1"
+                id="weight"
+                placeholder="Es. 80">
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Circonferenza Vita (cm)</label>
+
+            <input
+                type="number"
+                step="0.1"
+                id="waist"
+                placeholder="Es. 90">
+
+        </div>
+
+        <button id="nextButton">
+
+            Avanti →
+
+        </button>
+
+    </div>
 
 </div>
 
