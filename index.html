@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Check-up Corporeo | iosonoinforma</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<div class="overlay">
+
+<div class="container">
+
+<img src="img/logo.png" class="logo">
+
+<h1>
+
+CHECK-UP CORPOREO
+
+<span>GRATUITO</span>
+
+</h1>
+
+<p class="subtitle">
+
+Scopri la tua composizione corporea e ricevi un report professionale in meno di 2 minuti.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<div class="icon">💪</div>
+
+<h3>Massa Grassa</h3>
+
+<p>Calcolo della percentuale e dei kg di grasso corporeo.</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">🏋️</div>
+
+<h3>Massa Magra</h3>
+
+<p>Scopri quanta massa muscolare possiedi.</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">📊</div>
+
+<h3>BMI</h3>
+
+<p>Indice di Massa Corporea.</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">🔥</div>
+
+<h3>Metabolismo</h3>
+
+<p>BMR e TDEE personalizzati.</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">❤️</div>
+
+<h3>Rischio Metabolico</h3>
+
+<p>Rapporto Vita/Altezza e Vita/Fianchi.</p>
+
+</div>
+
+<div class="feature">
+
+<div class="icon">🎯</div>
+
+<h3>Obiettivo</h3>
+
+<p>Scopri quanti kg di grasso perdere.</p>
+
+</div>
+
+</div>
+
+<a href="#form" class="startButton">
+
+INIZIA IL CHECK-UP GRATUITO
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="form" class="formSection">
+
+<div class="container">
+
+<h2>
+
+Inserisci i tuoi dati
+
+</h2>
+
+<p>
+
+Compila il modulo per ricevere il tuo report.
+
+</p>
+
+<form id="checkupForm">
+
+<div class="grid">
+
+<input type="text" placeholder="Nome">
+
+<input type="text" placeholder="Cognome">
+
+<input type="email" placeholder="Email">
+
+<select>
+
+<option>Uomo</option>
+
+<option>Donna</option>
+
+</select>
+
+<input type="number" placeholder="Età">
+
+<input type="number" placeholder="Altezza (cm)">
+
+<input type="number" placeholder="Peso (kg)">
+
+<input type="number" placeholder="Collo (cm)">
+
+<input type="number" placeholder="Girovita (cm)">
+
+<input type="number" placeholder="Anca (solo donna)">
+
+</div>
+
+<button type="button" id="calculate">
+
+CALCOLA IL MIO REPORT
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="loading">
+
+<div class="container">
+
+<h2>
+
+Sto analizzando la tua composizione corporea...
+
+</h2>
+
+<div class="progress">
+
+<div class="bar"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="results">
+
+<div class="container">
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
